@@ -31,7 +31,7 @@
 //    var bar = Bar{};
 //    bar.a() // is equivalent to Bar.a(bar)
 //    bar.b(3) // is equivalent to Bar.b(&bar, 3)
-//    bar.c() // is equivalent to Bar.c(&bar)
+//    bar.c() // is equivalent to Bar.c(&bar) //this is slightly confusing
 //
 //    Notice that the name of the parameter doesn't matter. Some use
 //    self, others use a lowercase version of the type name, but feel
@@ -88,7 +88,7 @@ pub fn main() void {
         for (&aliens) |*alien| {
 
             // *** Zap the alien with the heat ray here! ***
-            ???.zap(???);
+            HeatRay.zap(heat_ray, alien);
 
             // If the alien's health is still above 0, it's still alive.
             if (alien.health > 0) aliens_alive += 1;
